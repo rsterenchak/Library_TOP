@@ -70,9 +70,9 @@ document.getElementById("svg-button").addEventListener("click", function(){
   const libraryDiv = document.querySelector(".library");
   
   let result = addBookToLibrary(); // returns 'book name' and 'array #'
-
+  
   // Creates and adds card for 'library' section
-  if(result[0] !== ""){
+  if((result.title.length) > 0){
     const newDiv = document.createElement("div");
     const secDiv = document.createElement("div");
     const newPar = document.createElement("p");
@@ -157,7 +157,7 @@ document.getElementById("svg-button").addEventListener("click", function(){
 
 // For adding shadow when hovering over SVG button
 const hoverButton = document.getElementById("svg-button");
-const closeButton = document.getElementById("close");
+// const closeButton = document.getElementById("close");
 // const readButton = document.getElementById("checkbox");
 
 hoverButton.addEventListener("mouseenter", function() {
@@ -169,22 +169,13 @@ hoverButton.addEventListener("mouseleave", function() {
 });
 
 // removeable after complete
-closeButton.addEventListener("mouseenter", function() {
-  this.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
-});
+// closeButton.addEventListener("mouseenter", function() {
+//  this.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+//});
 // removeable after complete
-closeButton.addEventListener("mouseleave", function() {
-  this.style.boxShadow = "none";
-});
-
-
-// Need eventListener to check if 'checked'
-
-
-
-  
-
-
+//closeButton.addEventListener("mouseleave", function() {
+//  this.style.boxShadow = "none";
+//});
 
 
 // Runs addition of Book object to Library array
