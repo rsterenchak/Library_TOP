@@ -1,0 +1,137 @@
+
+body {
+
+  margin: 0px; 
+  padding: 0px;
+
+}
+
+.outerContainer {
+
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: 
+  "header" 
+  "library";
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  height: 120px;
+  grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  
+}
+
+.sec1 {
+  display: grid;
+  grid-template-areas: "ic1 text1";
+  justify-content: center;
+  align-content: center;
+  
+}
+
+.ic1 {
+  grid-area: ic1;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  
+}
+
+#svg-button {
+  
+  width: 50px;
+}
+
+.text1 {
+  grid-area: text1;
+  display: grid;
+  font-family: 'Roboto';
+  align-self: center;
+  justify-self: center;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.sec2 {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  font-size: 30px;
+  font-family: 'Roboto';
+}
+
+.sec3 {
+  display: grid;
+  align-self: center;
+  justify-self: center;  
+  width: 35px;
+  
+}
+
+.library {
+  grid-area: library;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  gap: 30px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 2px solid black;
+  color: black;
+  height: 200px;
+  width: 200px;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 0.5fr 0.3fr 0.2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "title check close" 
+    "description description description"
+    ;
+  
+}
+
+.title {
+  grid-area: title;
+  justify-self: center;
+  
+}
+
+.close {
+  grid-area: close;
+  justify-self: center;
+  align-self: center;
+  width: 14px;
+  user-select: none;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.check {
+  grid-area: check;
+  display: grid;
+  justify-self: start;
+  align-self: center;
+  width: 30px;
+  user-select: none;  
+  margin-left: -8px;
+}
+
+.checkbox {
+  margin: 0px;
+  padding: 0px;
+  justify-self: start;
+}
+
+.description {
+  grid-area: description;
+  
+}
